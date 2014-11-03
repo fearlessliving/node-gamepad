@@ -34,8 +34,7 @@ install:
   - cmd: ECHO "Env Var PUBLISH_BINARY:"
   - cmd: ECHO %PUBLISH_BINARY%
   - cmd: git clone https://github.com/marcelklehr/nodist.git c:\nodist 2>&1
-  - cmd: SET ARCH=x64
-  - cmd: SET NODIST_X64=1
+  - cmd: SET NODIST_X64=0
   - cmd: call nodist update
   - cmd: call nodist stable
   - cmd: npm install -g node-gyp

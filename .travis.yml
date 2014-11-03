@@ -65,7 +65,7 @@ script:
   - if [[ "$platform" == 'linux' ]]; then sudo apt-get -y install gcc-multilib g++-multilib; fi
   # test source compile in 32 bit mode with internal libsqlite3
   - if [[ "$platform" == 'linux' ]]; then CC=gcc-4.6 CXX=g++-4.6 npm install --build-from-source; else npm install --build-from-source; fi
-  - npm test
+  - npm gamepad
   # publish 32 bit build
   - echo "Publishing x86 32bit Binary Package? ->" $PUBLISH_BINARY
   - if [[ $PUBLISH_BINARY == true ]]; then node-pre-gyp package publish; fi;
