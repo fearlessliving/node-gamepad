@@ -43,7 +43,7 @@ build_script:
   - cmd: ECHO "BUILDING ia32 version:"
   - cmd: npm install --build-from-source
   - cmd: SET PATH=%cd%\node_modules\.bin\;%PATH%
-  - cmd: node serialport.js
+  - cmd: node gamepad.js
   - cmd: ECHO "PUBLISH ia32 package:"
   - cmd: npm install aws-sdk
   - cmd: IF %PUBLISH_BINARY%==true (node-pre-gyp package publish 2>&1)
