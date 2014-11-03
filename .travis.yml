@@ -36,7 +36,7 @@ install:
   # ensure source install works
   - npm install --build-from-source
   # test our module
-  - node lib/opencv.js
+  - node gamepad
 
 before_script:
   - echo "Publishing native platform Binary Package? ->" $PUBLISH_BINARY
